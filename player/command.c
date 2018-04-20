@@ -5317,6 +5317,10 @@ int run_command(struct MPContext *mpctx, struct mp_cmd *cmd, struct mpv_node *re
                            async);
         break;
 
+    case MP_CMD_SCREENSHOT_TEMPLATE:
+        screenshot_template(mpctx, cmd->args[0].v.s);
+        break;
+
     case MP_CMD_SCREENSHOT_RAW: {
         if (!res)
             return -1;

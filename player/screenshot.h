@@ -39,6 +39,9 @@ void screenshot_request(struct MPContext *mpctx, int mode, bool each_frame,
 void screenshot_to_file(struct MPContext *mpctx, const char *filename, int mode,
                         bool osd, bool async);
 
+// template: string used as a template for the screenshot file name 
+void screenshot_template(struct MPContext *mpctx, const char *template);
+
 // mode is the same as in screenshot_request()
 struct mp_image *screenshot_get_rgb(struct MPContext *mpctx, int mode);
 

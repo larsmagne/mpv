@@ -125,6 +125,7 @@ const struct mp_cmd_def mp_cmds[] = {
                       {"window", 1},
                       {"subtitles", 2})),
   }},
+  { MP_CMD_SCREENSHOT_TEMPLATE, "screenshot-template", { ARG_STRING }},
   { MP_CMD_SCREENSHOT_RAW, "screenshot-raw", {
       OARG_CHOICE(2, ({"video", 0},
                       {"window", 1},

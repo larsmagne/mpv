@@ -108,9 +108,11 @@ static void write_screenshot_thread(void *arg)
     struct screenshot_item *item = arg;
     screenshot_ctx *ctx = item->mpctx->screenshot_ctx;
 
+    /*
     LOCK(item)
     screenshot_msg(ctx, MSGL_INFO, "Screenshot: '%s'", item->filename);
     UNLOCK(item)
+    */
 
     if (!item->img || !write_image(item->img, &item->opts, item->filename,
                                    item->mpctx->log))
